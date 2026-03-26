@@ -1,0 +1,20 @@
+git init
+git add .
+git commit -m "Initial Java CI/CD commit
+git branch -M main
+git remote add origin https://github.com/your-reponame/simple-java-app.git
+git push -u origin main
+mvn clean package
+git add deployment.yaml
+git commit -m "Added Kubernetes deployment file"
+git push
+Steps
+Manage Jenkins
+↓
+Manage Credentials
+↓
+(System)
+↓
+Global credentials (unrestricted)
+Add Credentials
+New Item → Pipeline → Name: Java-CICD
